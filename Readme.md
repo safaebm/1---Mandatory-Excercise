@@ -64,7 +64,7 @@ npm install
 _./src/index.ts_
 
 
-- we creat a function that returns the the number of affected person by community 
+- we creat a function that returns the the maximum scaled number of affected person 
 
 ```bash
 const calculateBasedOnAffectedCases = (comunidad: string, data: any[]) => {
