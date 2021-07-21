@@ -61,18 +61,6 @@ npm install
 ```
 -
 
-
-_./src/index.ts_
-
-```diff
-import * as d3 from "d3";
-import * as topojson from "topojson-client";
-- const europejson = require("./europe.json");
-+ const spainjson = require("./spain.json");
-```
-
-- Let's build the spain map in stenad of europe:
-
 _./src/index.ts_
 
 
