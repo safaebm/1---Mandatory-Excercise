@@ -64,7 +64,7 @@ npm install
 _./src/index.ts_
 
 
-- we creat a funsion that returns the the number of affected person by community 
+- we creat a function that returns the the number of affected person by community 
 
 ```bash
 const calculateBasedOnAffectedCases = (comunidad: string, data: any[]) => {
@@ -75,7 +75,7 @@ const calculateBasedOnAffectedCases = (comunidad: string, data: any[]) => {
 
 ```
 
-- we creat a funsion that calculates the radius based on the function above  
+- we creat a function that calculates the radius based on the function above  
 
 ```bash
   const calculateRadiusBasedOnAffectedCases = (
@@ -87,7 +87,7 @@ const calculateBasedOnAffectedCases = (comunidad: string, data: any[]) => {
 
 ```
 
-- we creat a funsion the new values of the circle the new radius calculated above  
+- we creat a function that updates the new values of the circle the new radius calculated above  
 
 ```bash
   const update = (data: ResultEntry[]) => {
@@ -109,18 +109,18 @@ const calculateBasedOnAffectedCases = (comunidad: string, data: any[]) => {
 - we creat 2  function each with the click event to show each the results   
 
 ```bash
-  const update = (data: ResultEntry[]) => {
-    svg.selectAll("circle").remove();
-    svg
-      .selectAll("circle")
-      .data(latLongCommunities)
-      .enter()
-      .append("circle")
-      .attr("class", "affected-marker")
-      .attr("r", (d) => calculateRadiusBasedOnAffectedCases(d.name, data))
-      .attr("cx", (d) => aProjection([d.long, d.lat])[0])
-      .attr("cy", (d) => aProjection([d.long, d.lat])[1])      
-  };
+    
+  document
+  .getElementById("Results2020")
+  .addEventListener("click", function handleResults() {
+    update(stats);
+  });
+
+document
+  .getElementById("Results2021")
+  .addEventListener("click", function handleResults() {
+    update(statshoy);
+  });
 
 ```
 _./src/maps .ts_
